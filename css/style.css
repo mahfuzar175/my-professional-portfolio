@@ -675,6 +675,10 @@ span {
     margin-top: 4rem;
   }
 
+  .education-container .education-row {
+    display: block;
+  }
+
   .services h2{
     margin-bottom: 3rem;
   }
@@ -689,6 +693,10 @@ span {
 }
 
 @media (max-width: 617px){
+
+  .education-container .education-row {
+    display: block;
+  }
   .portfolio h2{
     margin-bottom: 3rem;
   }

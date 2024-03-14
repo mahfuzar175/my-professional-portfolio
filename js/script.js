@@ -68,3 +68,15 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: "right" });
     loop: true
 
   })
+
+
+  function sendMail(){
+    var params = {
+        from_name: document.getElementById('fullName').value,
+        email_id: document.getElementById("email_id").value,
+        message: document.getElementById("message").value
+    }
+    emailjs.send("service_xn7ytyq", "template_z69f6ao", params).then(function(res){
+        alert("Success!" + res.status);
+    })
+  }

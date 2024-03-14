@@ -22,7 +22,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
+    <!-- emailjs -->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -33,6 +33,10 @@
       });
    })();
 </script>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+
+
   </head>
 
   <body>
@@ -68,7 +72,9 @@
           <a href="#"><i class="bx bxl-github"></i></a>
           <a href="#"><i class="fa-brands fa-hackerrank"></i></a>
         </div>
-        <a href="#" class="btn">Download CV</a>
+        <!-- Add the following HTML code for the "Download CV" button -->
+<a href="#" class="btn" id="downloadBtn">Download CV</a>
+
       </div>
       <div class="home-img">
         <img src="images/home.png" alt="home-image" />
@@ -433,5 +439,7 @@
 
     <!-- custom js -->
     <script src="js/script.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
   </body>
 </html>

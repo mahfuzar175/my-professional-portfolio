@@ -69,14 +69,42 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: "right" });
 
   })
 
+/**email js added */
 
-  function sendMail(){
+function sendMail(){
     var params = {
         from_name: document.getElementById('fullName').value,
         email_id: document.getElementById("email_id").value,
         message: document.getElementById("message").value
     }
-    emailjs.send("service_xn7ytyq", "template_z69f6ao", params).then(function(res){
-        alert("Success!" + res.status);
-    })
-  }
+    emailjs.send("service_xn7ytyq", "template_z69f6ao", params).then(function(){
+        alertify.success("Email sent successfully!");
+        // Reset the form
+        document.querySelector("form").reset();
+    }).catch(function(error) {
+        alertify.error("Error sending email: " + error);
+    });
+}
+
+// Add the following JavaScript code to your existing script
+
+// Function to handle the download when the button is clicked
+const handleDownload = () => {
+    // Create an anchor element
+    const downloadLink = document.createElement("a");
+    // Set the download link URL
+    downloadLink.href = "https://drive.google.com/uc?export=download&id=1o-cSk7CmkPfgUVNu-JzooiGPvbU9PmfR";
+    // Set the target attribute to "_blank" to open in a new tab
+    downloadLink.target = "_blank";
+    // Set the filename for the downloaded file
+    downloadLink.download = "MD MAHFUZAR RAHMAN TAREK- Resume"; // Change "YourFileName.pdf" to your desired filename
+    // Append the anchor element to the document body
+    document.body.appendChild(downloadLink);
+    // Trigger a click event on the anchor element
+    downloadLink.click();
+    // Remove the anchor element from the document body after download
+    document.body.removeChild(downloadLink);
+};
+
+// Add an event listener to the "Download CV" button
+document.getElementById("downloadBtn").addEventListener("click", handleDownload);

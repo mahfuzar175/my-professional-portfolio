@@ -80,11 +80,12 @@ section {
 .home {
   display: flex;
   justify-content: center;
+  gap: 1rem;
   align-items: center;
 }
 
 .home-img img {
-  width: 30vw;
+  width: 31.5vw;
   animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -165,13 +166,13 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
   background: var(--second-bg-color);
   padding-bottom: 5rem;
 }
 
 .about-img img {
-  width: 30vw;
+  width: 31vw;
 }
 
 .heading {

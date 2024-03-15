@@ -167,6 +167,7 @@ span {
   align-items: center;
   gap: 2rem;
   background: var(--second-bg-color);
+  padding-bottom: 5rem;
 }
 
 .about-img img {
